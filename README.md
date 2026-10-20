@@ -31,24 +31,41 @@ Disclosure: Fenris provides clients with support in implementing LLM evaluations
 
 ## 2. Core Concepts to know
 
-We will not recap key concepts here, as there are already resources and
-articles referenced below that provide introductions to evaluation concepts.
-
-On this page and in the comments we use specialized language and refer to
-concepts that we want to call out. This is an emerging domain, and
-these ideas and terms are not used universally.
+LLM evaluation is an emerging domain, and its terminology is not yet used
+universally. The definitions below explain how this repository uses several
+common terms.
 
 **What are LLM Evaluations?**
 
 LLM evaluations, or “evals”, are structured assessments of AI system behavior
 against defined expectations or criteria.
 
-Key terms
-* **offline** vs **online** evals.
-* **evalsets**
-* **traces**
-* **LLM model** vs **LLM system**
-* Evaluation *harness*
+An evaluation can examine a model in isolation, but applications should
+generally be evaluated as complete systems. Prompts, retrieved information,
+tools, application logic, model responses, and user experience can all affect
+the system's behavior. A capable model does not guarantee a capable system.
+
+**Key terms**
+
+* **Offline evals** assess a system before deployment or outside live user
+  traffic, often by running a fixed set of cases after a change.
+* **Online evals** assess behavior in production, using signals from live
+  traffic, monitoring, feedback, or controlled experiments.
+* An **eval set** is a curated collection of inputs or scenarios used to assess
+  a system. It may also include expected outcomes, labels, criteria, and other
+  context needed for evaluation.
+* A **trace** is a record of a system's execution. It can include inputs,
+  outputs, retrieved context, tool calls and results, model and prompt
+  configurations, timing, and other intermediate steps.
+* An **LLM model** is the underlying language model. An **LLM system** includes
+  the model and the surrounding prompts, retrieval, tools, application logic,
+  interfaces, and operational controls that shape its behavior.
+* An **evaluation harness** is software that runs evaluation cases, captures
+  system outputs, applies evaluators, and reports or compares results.
+* **Human review** uses people, often users or domain experts, to assess system
+  behavior. **Automated evaluation** uses code- or model-based evaluators to
+  apply checks at greater scale. Automated evaluators should be validated
+  against relevant human judgment rather than assumed to be reliable.
 
 ## 3. Reading list
 
