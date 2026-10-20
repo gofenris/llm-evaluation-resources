@@ -47,25 +47,29 @@ the system's behavior. A capable model does not guarantee a capable system.
 
 **Key terms**
 
+* An **eval set** is a curated collection of inputs or scenarios used to assess
+  a system. It may also include expected outcomes, labels, criteria, and other
+  context needed for evaluation.
+* An **LLM model** is the underlying language model. An **LLM system** includes
+  one or more models and the surrounding prompts, retrieval, tools, application
+  logic, interfaces, and operational controls that shape its behavior. An LLM
+  system with multiple interacting components is also known as a **compound AI
+  system**.
+* A **trace** is a record of a system's execution and a primary source of
+  observability into its behavior. Traces help show how a system produced an
+  outcome and support diagnosing failures across components. They can include
+  inputs, outputs, retrieved context, tool calls and results, model and prompt
+  configurations, timing, and other intermediate steps.
 * **Offline evals** assess a system before deployment or outside live user
   traffic, often by running a fixed set of cases after a change.
 * **Online evals** assess behavior in production, using signals from live
   traffic, monitoring, feedback, or controlled experiments.
-* An **eval set** is a curated collection of inputs or scenarios used to assess
-  a system. It may also include expected outcomes, labels, criteria, and other
-  context needed for evaluation.
-* A **trace** is a record of a system's execution. It can include inputs,
-  outputs, retrieved context, tool calls and results, model and prompt
-  configurations, timing, and other intermediate steps.
-* An **LLM model** is the underlying language model. An **LLM system** includes
-  the model and the surrounding prompts, retrieval, tools, application logic,
-  interfaces, and operational controls that shape its behavior.
-* An **evaluation harness** is software that runs evaluation cases, captures
-  system outputs, applies evaluators, and reports or compares results.
+* An **evaluation harness** is tooling and code to pass evaluation test
+  cases to the system, apply judges and evaluators, compare results, and
+  produce reports.
 * **Human review** uses people, often users or domain experts, to assess system
   behavior. **Automated evaluation** uses code- or model-based evaluators to
-  apply checks at greater scale. Automated evaluators should be validated
-  against relevant human judgment rather than assumed to be reliable.
+  apply checks at greater scale.
 
 ## 3. Reading list
 
