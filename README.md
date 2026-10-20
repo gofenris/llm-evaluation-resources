@@ -1,4 +1,4 @@
-# llm-evaluation-resources
+# LLM Evaluation Resources for Public-Benefit AI
 Some resources related to LLM Evaluations.
 
 ## Table of Contents
