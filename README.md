@@ -4,9 +4,8 @@ Some resources related to LLM Evaluations.
 ## Table of Contents
 1. [Statement of Scope](#1-statement-of-scope)
 2. [Core Concepts to know](#2-core-concepts-to-know)
-3. [Resources](#3-resources)
+3. [Reading list](#3-reading-list)
 4. [Useful tools](#4-useful-tools)
-5. [Reading list](#5-reading-list)
 
 Published by: fenris (`@gofenris`)
 
@@ -40,76 +39,23 @@ concepts that we want to call out. This is an emerging domain, and
 these ideas and terms are not used universally.
 
 **What are LLM Evaluations?**
-```txt
-Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
-Lorem Ipsum.
-Lorem Ipsum.
-```
+
+LLM evaluations, or “evals”, are structured assessments of AI system behavior
+against defined expectations or criteria.
 
 Key terms
 * **offline** vs **online** evals.
 * **evalsets**
 * **traces**
 * **LLM model** vs **LLM system**
-* Evaluation *harness* 
+* Evaluation *harness*
 
-## 3. Resources
-
-Hamel Husain's resources and blog
-* https://hamel.dev/
-* Hamel has a blog, online course, trainings, and videos (explainers and interviews/use cases), all focused on LLM evaluations.
-
-## 4. Useful tools
-
-### Observability Tooling
-
-LLM Observability is the ability to inspect what an application did in
-production, extending traditional logging with specific features useful in
-LLM systems. These include the capture of traces, inputs/outputs, tool
-arguments, and model configurations.
-
-Examples of LLM observability systems and tools:
-* Langfuse / Langsmith
-* Arize Phoenix (open source)
-* OpenLIT / OpenLLMetry
-* Helicone
-
-### Evaluation Tools
-
-There are tools that provide generalized eval harnesses and commonly useful
-eval features almost "out of the box". These are designed to help conduct
-experiments, implement offline evals and online evals
-
-Examples of LLM eval tools.
-* Braintrust
-* Promptfoo
-
-### LLM Gateways
-
-There are many LLM providers (Anthropic, Bedrock, HuggingFace, ...)
-and more than one "standard" for APIs. A gateway provides a single
-controlled point.  This provides several engineering benefits (a unified
-API, also model routing for optimizations, fallbacks), policy benefits
-(rate limits, budget management, access controls). 
-
-From an evals perspetive, there are also benefits to using an LLM Gateway, 
-as they can simplify the implementation of an eval harness, and offer
-simplifications that reduce common observability challenges. They can 
-enable A/B testing between models, and compare model performance (ie.
-cost/latency). 
-
-Remember that gateways channel only LLM calls, but most LLM applications
-utilize multiple components (like information retrieval and custom
-systems that might be connected via agent tools) to complete a task. When we
-are concerned with evals we care about the system _around_
-the model, and not just the LLM model calls. 
-
-## 5. Reading list
+## 3. Reading list
 
 These are readings that we have found useful, provided here in the style of
 an annotated bibliography.
 
-### Start here
+### Foundations
 
 #### [29 LLM Evaluation Concepts Every Engineer Needs to Know](https://newsletter.systemdesign.one/p/llm-evals)
 *Anshuman Mishra — April 2026*
@@ -243,3 +189,48 @@ mitigation, and operationalization.
 Useful deep reading for distinguishing grounding from factuality and for
 understanding evaluation as one part of a broader process for managing system
 risks.
+
+## 4. Useful tools
+
+### Observability Tooling
+
+LLM Observability is the ability to inspect what an application did in
+production, extending traditional logging with specific features useful in
+LLM systems. These include the capture of traces, inputs/outputs, tool
+arguments, and model configurations.
+
+Examples of LLM observability systems and tools:
+* Langfuse / Langsmith
+* Arize Phoenix (open source)
+* OpenLIT / OpenLLMetry
+* Helicone
+
+### Evaluation Tools
+
+There are tools that provide generalized eval harnesses and commonly useful
+eval features almost "out of the box". These are designed to help conduct
+experiments, implement offline evals and online evals
+
+Examples of LLM eval tools.
+* Braintrust
+* Promptfoo
+
+### LLM Gateways
+
+There are many LLM providers (Anthropic, Bedrock, HuggingFace, ...)
+and more than one "standard" for APIs. A gateway provides a single
+controlled point.  This provides several engineering benefits (a unified
+API, also model routing for optimizations, fallbacks), policy benefits
+(rate limits, budget management, access controls).
+
+From an evals perspetive, there are also benefits to using an LLM Gateway,
+as they can simplify the implementation of an eval harness, and offer
+simplifications that reduce common observability challenges. They can
+enable A/B testing between models, and compare model performance (ie.
+cost/latency).
+
+Remember that gateways channel only LLM calls, but most LLM applications
+utilize multiple components (like information retrieval and custom
+systems that might be connected via agent tools) to complete a task. When we
+are concerned with evals we care about the system _around_
+the model, and not just the LLM model calls.
