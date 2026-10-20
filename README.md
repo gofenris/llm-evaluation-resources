@@ -121,7 +121,7 @@ Comment by @amanahuja:
 Comment by @amanahuja:
 > For evaluating agents, specifically. Technical guide for engineers.
 
-[How to construct domain-specific LLM evaluation systems: A Field Guide](https://hamel.dev/blog/posts/evals/) by Hamel Husain (March 2024)
+[Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain (March 2024)
 - A Field Guide to Rapidly Improving AI Products
 - Motivation and basics. 
 
@@ -131,3 +131,48 @@ Comment by @amanahuja:
 > of an LLM-based product. It's 2 years old, but the core concepts still
 > stand. Has a "DIY" mindset which is, IMO, a great way to approach evals. 
 
+[A Field Guide to Rapidly Improving AI Products](https://hamel.dev/blog/posts/field-guide/) by Hamel Husain (March 2025)
+- Lessons from more than 30 production AI implementations, covering error analysis, custom data viewers, domain-expert participation, synthetic data, trust in evals, and experiment-based roadmaps.
+
+Comment by @amanahuja:
+> A practical follow-on to "Your AI Product Needs Evals." Especially useful for teams deciding how to turn evaluation results into an iterative product-development process.
+
+[Using LLM-as-a-Judge For Evaluation: A Complete Guide](https://hamel.dev/blog/posts/llm-judge/) by Hamel Husain (October 2024; updated September 2026)
+- A step-by-step process for building an LLM judge and validating it against a domain expert's pass/fail judgments and written critiques.
+- Covers dataset construction, true-positive and true-negative rates, and error analysis.
+
+Comment by @amanahuja:
+> Useful because it treats an LLM judge as something that must itself be evaluated, rather than as a trustworthy metric out of the box.
+
+[How AI Evaluation Works in Practice: Insights from Implementers](https://www.idinsight.org/article/how-ai-evaluation-works-in-practice-insights-from-implementers/) by Isha Fuletra and Suzin You (February 2026)
+- Lessons from organizations deploying AI in health, social protection, justice, and behavior-change programs.
+- Connects model evaluation with product behavior, user outcomes, organizational constraints, and social impact.
+
+Comment by @amanahuja:
+> Particularly relevant to organizations building AI for public benefit. It shows why evaluation priorities should reflect risk, practical constraints, and the decisions an organization needs to make next.
+
+[How We Built an AI Evaluation Framework with Experts in the Loop](https://datacatalog.urban.org/data-at-urban/how-we-built-ai-evaluation-framework-experts-loop) by Judah Axelrod and Ridhi Purohit, Urban Institute (July 2026)
+- A case study on evaluating an AI-ready knowledge base for the Upward Mobility Initiative with domain experts in the loop.
+
+Comment by @amanahuja:
+> A useful peer example for research and mission-driven organizations that need subject-matter experts to define and review grounded, well-sourced answers.
+
+[Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences](https://arxiv.org/abs/2404.12272) by Shreya Shankar, J. D. Zamfirescu-Pereira, Björn Hartmann, Aditya G. Parameswaran, and Ian Arawjo (April 2024)
+- Presents EvalGen, a system for aligning LLM-generated evaluators with human judgments.
+- Introduces "criteria drift": grading outputs helps people define their criteria, so evaluation criteria cannot always be specified completely in advance.
+
+Comment by @amanahuja:
+> Provides research support for an iterative, human-in-the-loop approach to developing evaluation criteria and validating automated evaluators.
+
+[Grounding and Evaluation for Large Language Models: Practical Challenges and Lessons Learned](https://arxiv.org/abs/2407.12858) by Krishnaram Kenthapadi, Mehrnoosh Sameki, and Ankur Taly (July 2024)
+- A survey of grounding, evaluation, and responsible-AI concerns for generative systems, including hallucinations, prompt injection, harmful content, robustness, and observability.
+- A [companion KDD 2024 tutorial](https://sites.google.com/view/llm-evaluation-tutorial) provides slides and organizes the material around identification, measurement, mitigation, and operationalization.
+
+Comment by @amanahuja:
+> Useful deep reading for distinguishing grounding from factuality and for understanding evaluation as one part of a broader process for managing system risks.
+
+[Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST AI 100-1](https://www.nist.gov/itl/ai-risk-management-framework) by the National Institute of Standards and Technology (January 2023)
+- A voluntary framework for managing AI risk through the GOVERN, MAP, MEASURE, and MANAGE functions.
+
+Comment by @amanahuja:
+> Broader than LLM evaluation, but useful for connecting the context and consequences of an AI system to the rigor and scope of its evaluations.
