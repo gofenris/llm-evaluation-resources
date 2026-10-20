@@ -5,7 +5,7 @@ Some resources related to LLM Evaluations.
 1. [Statement of Scope](#1-statement-of-scope)
 2. [Core Concepts to know](#2-core-concepts-to-know)
 3. [Reading list](#3-reading-list)
-4. [Useful tools](#4-useful-tools)
+4. [Tooling](#4-tooling)
 
 Published by: fenris (`@gofenris`)
 
@@ -211,47 +211,8 @@ Useful deep reading for distinguishing grounding from factuality and for
 understanding evaluation as one part of a broader process for managing system
 risks.
 
-## 4. Useful tools
+## 4. Tooling
 
-### Observability Tooling
-
-LLM Observability is the ability to inspect what an application did in
-production, extending traditional logging with specific features useful in
-LLM systems. These include the capture of traces, inputs/outputs, tool
-arguments, and model configurations.
-
-Examples of LLM observability systems and tools:
-* Langfuse / Langsmith
-* Arize Phoenix (open source)
-* OpenLIT / OpenLLMetry
-* Helicone
-
-### Evaluation Tools
-
-There are tools that provide generalized eval harnesses and commonly useful
-eval features almost "out of the box". These are designed to help conduct
-experiments, implement offline evals and online evals
-
-Examples of LLM eval tools.
-* Braintrust
-* Promptfoo
-
-### LLM Gateways
-
-There are many LLM providers (Anthropic, Bedrock, HuggingFace, ...)
-and more than one "standard" for APIs. A gateway provides a single
-controlled point.  This provides several engineering benefits (a unified
-API, also model routing for optimizations, fallbacks), policy benefits
-(rate limits, budget management, access controls).
-
-From an evals perspetive, there are also benefits to using an LLM Gateway,
-as they can simplify the implementation of an eval harness, and offer
-simplifications that reduce common observability challenges. They can
-enable A/B testing between models, and compare model performance (ie.
-cost/latency).
-
-Remember that gateways channel only LLM calls, but most LLM applications
-utilize multiple components (like information retrieval and custom
-systems that might be connected via agent tools) to complete a task. When we
-are concerned with evals we care about the system _around_
-the model, and not just the LLM model calls.
+Several categories of tools and platforms can support LLM evaluation
+workflows. See [Tooling for LLM evaluation](docs/tools.md) for an overview of
+observability tools, evaluation platforms and frameworks, and LLM gateways.
