@@ -6,7 +6,7 @@ Some resources related to LLM Evaluations.
 2. [Core Concepts to know](#2-core-concepts-to-know)
 3. [Resources](#3-resources)
 4. [Useful tools](#4-useful-tools)
-5. [Articles](#5-articles)
+5. [Reading list](#5-reading-list)
 
 Published by: fenris (`@gofenris`)
 
@@ -104,22 +104,18 @@ systems that might be connected via agent tools) to complete a task. When we
 are concerned with evals we care about the system _around_
 the model, and not just the LLM model calls. 
 
-## 5. Articles
+## 5. Reading list
 
-These are articles that we have found useful, provided here in the style of
+These are readings that we have found useful, provided here in the style of
 an annotated bibliography.
+
+### Start here
 
 [29 LLM Evaluation Concepts Every Engineer Needs to Know](https://newsletter.systemdesign.one/p/llm-evals), by Anshuman Mishra (April 2026)
 - "From 'it looked fine in testing' to a system you can actually trust — a vocabulary/framework guide for engineers new to LLM evals."
 
 Comment by @amanahuja:
 > Written for engineers and builders who are familiar with traditional testing like unit-tests; describes basic concepts around LLM evaluations and commonly used language.
-
-[Demystifying Evals For AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) by Anthropic (January 2026)
-- "Anthropic's framework for structuring evals for AI agents — single-turn vs. multi-turn, conversational agent evaluation, and eval-driven development."
-
-Comment by @amanahuja:
-> For evaluating agents, specifically. Technical guide for engineers.
 
 [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/) by Hamel Husain (March 2024)
 - A Field Guide to Rapidly Improving AI Products
@@ -137,12 +133,24 @@ Comment by @amanahuja:
 Comment by @amanahuja:
 > A practical follow-on to "Your AI Product Needs Evals." Especially useful for teams deciding how to turn evaluation results into an iterative product-development process.
 
+### Evaluation methods
+
 [Using LLM-as-a-Judge For Evaluation: A Complete Guide](https://hamel.dev/blog/posts/llm-judge/) by Hamel Husain (October 2024; updated September 2026)
 - A step-by-step process for building an LLM judge and validating it against a domain expert's pass/fail judgments and written critiques.
 - Covers dataset construction, true-positive and true-negative rates, and error analysis.
 
 Comment by @amanahuja:
 > Useful because it treats an LLM judge as something that must itself be evaluated, rather than as a trustworthy metric out of the box.
+
+### Agents
+
+[Demystifying Evals For AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) by Anthropic (January 2026)
+- "Anthropic's framework for structuring evals for AI agents — single-turn vs. multi-turn, conversational agent evaluation, and eval-driven development."
+
+Comment by @amanahuja:
+> For evaluating agents, specifically. Technical guide for engineers.
+
+### Evaluation for public-benefit systems
 
 [How AI Evaluation Works in Practice: Insights from Implementers](https://www.idinsight.org/article/how-ai-evaluation-works-in-practice-insights-from-implementers/) by Isha Fuletra and Suzin You (February 2026)
 - Lessons from organizations deploying AI in health, social protection, justice, and behavior-change programs.
@@ -156,6 +164,8 @@ Comment by @amanahuja:
 
 Comment by @amanahuja:
 > A useful peer example for research and mission-driven organizations that need subject-matter experts to define and review grounded, well-sourced answers.
+
+### Research and standards: deep reading
 
 [Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences](https://arxiv.org/abs/2404.12272) by Shreya Shankar, J. D. Zamfirescu-Pereira, Björn Hartmann, Aditya G. Parameswaran, and Ian Arawjo (April 2024)
 - Presents EvalGen, a system for aligning LLM-generated evaluators with human judgments.
